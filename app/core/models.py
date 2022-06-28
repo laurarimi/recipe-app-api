@@ -33,9 +33,6 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
 
         return user
-
-
-
 class User(AbstractBaseUser, PermissionsMixin):
     """User in the system."""
     email = models.EmailField(max_length=255, unique=True)
